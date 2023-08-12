@@ -1,0 +1,10 @@
+--- a/adasat.gpr
++++ b/adasat.gpr
+@@ -13,6 +13,7 @@
+    for Object_Dir use "obj/" & Library_Kind_Param & "/" & Build_Mode;
+    for Library_Name use "adasat";
+    for Library_Kind use Library_Kind_Param;
++   for Library_Version use "lib" & Project'Library_Name & ".so." & external("VERSION");
+ 
+    Common_Ada_Cargs := ("-gnatwa", "-gnatyg", "-fPIC");
+ 
